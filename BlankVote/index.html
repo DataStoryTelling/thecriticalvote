@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blank Vote Chart</title>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+	<style type="text/css">
+		#blank {
+			min-width: 310px;
+			max-width: 800px;
+			height: 400px;
+			margin: 0 auto
+		}
+	</style>
+</head>
+<body>
+	<div id="blank"></div>
+	<script type="text/javascript">
+		
+
+Highcharts.chart('blank', {
+
+    title: {
+        text: 'Blank Vote Rate of By-Election, 2010, 2016, 2018'
+    },
+
+    subtitle: {
+        text: 'Source: Electoral Affairs Commission'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Rate of blank vote'
+        }
+    },
+    xAxis: {
+    	categories: ["2010 (5 Constituencies Referendum)", "2016 (Ronny Tong's Resignation)", "2018 (4 Disqualified Seats)"],
+	},
+    series: [{
+        name: 'Rate of Blank Vote %',
+        data: [3.405, 0.377, 0.920]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+            	
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+                
+            }
+        }]
+    }
+
+});
+
+	</script>
+</body>
+</html>
