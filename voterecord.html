@@ -8,11 +8,20 @@
 	<head>
 		<title>The Critical Vote</title>
 		<meta charset="utf-8" />
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script type="text/javascript" src="Filter/filter_merged.js"></script>
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<style type="text/css">
+			.details th, td {
+    			border: 1px solid black;
+  				border-spacing: 20px;
+			}
+		</style>
 	</head>
 	<body>
 
@@ -47,7 +56,90 @@
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
-									<iframe src="http://www.strawpoll.me/embed_1/15349646" style="width:50%;height:500px;border:0;">Loading poll...</iframe>
+								<div class="Filter">
+									<h3>Choose A Meeting Date and then the Motion....</h2>
+									<select id="meetingDates" name="meetingDates" title="Meeting Dates"></select>
+									<select id="motions" name="motions" title="Choose a motion"></select>
+								<div class="motionInfo">
+									<p class="motion-ch">Motion Name (Chinese): </p>
+									<p class="motion-en">Motion Name (English): </p>
+									<p class="mover">Motion mover: </p>
+									<p class="vote-date">Date-Time of Vote: </p>
+									<p class="voteSepMech">Vote Seperate Mechanism: </p>
+									<p class="vote-result">Result: </p>
+									<p class="all-con" style="visibility:hidden">Vote: </p>
+
+									<p class="geo-con" style="visibility:hidden">Geographical Constituency Vote: </p>			
+									<p class="func-con" style="visibility:hidden">Functional Constituency Vote: </p>
+								<table class="details">
+										<tr>
+											<td>Constituency:</td>
+											<th colspan="5">Geographical Constituency</th>
+											<th colspan="5">Functional Constituency</th>
+										</tr>
+										<tr>
+											<td>Vote: </td>
+											<td>Yes</td>
+											<td>No</td>
+											<td>Absent</td>
+											<td>Abstain</td>
+											<td>Present</td>
+											<td>Yes</td>
+											<td>No</td>
+											<td>Absent</td>
+											<td>Abstain</td>
+											<td>Present</td>
+										</tr>
+					
+										<tr>
+											<td>Pan-democratic Camp: </td>
+											<div class="Geographical">
+												<td class="yes"></td>
+												<td class="no"></td>
+												<td class="absent"></td>
+												<td class="abstain"></td>
+												<td class="present"></td>
+											</div>
+											<div class="Functional">
+												<td class="demo-yes-func"></td>
+												<td class="demo-no-func"></td>
+												<td class="demo-absent-func"></td>
+												<td class="demo-abstain-func"></td>
+												<td class="demo-present-func"></td>
+											</div>
+					
+										</tr>
+
+										<tr>
+											<td>Pro-establishment Camp: </td>
+											<div class="Geographical">
+												<td class="es-yes"></td>
+												<td class="es-no"></td>
+												<td class="es-absent"></td>
+												<td class="es-abstain"></td>
+												<td class="es-present"></td>
+											</div>
+											<div class="Functional">
+												<td class="es-yes-func"></td>
+												<td class="es-no-func"></td>
+												<td class="es-absent-func"></td>
+												<td class="es-abstain-func"></td>
+												<td class="es-present-func"></td>
+											</div>
+										</tr>
+									</table>
+									</br>
+									<p class="absentMember" style="visibility:hidden">Absent Member: </p>
+
+									<p style="color:grey">The votes counting by camps above excludes functional constituency member Dr Pierre CHAN，陳沛然, who claims himself is in neither.</p>
+									<p style="color:grey">Data source: <a href="https://www.legco.gov.hk/general/english/counmtg/yr16-20/mtg_1718.htm#toptbl" target="_blank">Legislative Council of HKSAR</a> Data from 09/11/2016 - 21/03/2018</p>
+									<p style="color:grey"><a href="Filter/term6.json" target="_blank">Click</a> to download the Data we parsed into JSON</p>
+								</div>
+								<script type="text/javascript">
+									createFilter();
+								</script>
+								</div>
+								<iframe src="http://www.strawpoll.me/embed_1/15349646" style="width:50%;height:500px;border:0;">Loading poll...</iframe>
 
 								<h3>Lorem ipsum dolor</h3>
 								<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
