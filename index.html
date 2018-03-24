@@ -10,10 +10,31 @@
     <title>The Critical Vote</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="echarts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <style type="text/css">
+        #blank {
+            min-width: 310px;
+            max-width: 800px;
+            height: 400px;
+            margin: 0 auto
+        }
+    </style>
 </head>
 
 <body class="landing">
@@ -30,8 +51,10 @@
                         <a href="#menu" class="menuToggle"><span>Menu</span></a>
                         <div id="menu">
                             <ul>
-                                <li><a href="index.html">About</a></li>
-                                <li><a href=#test>Test</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href=#main>Story</a></li>
+                                <li><a href=#absentSection>Absent Rate</a></li>
+                                <li><a href="#infographic">Voting Procedure</a></li>
                                 <li><a href="voterecord.html">Vote Reocord Explorer</a></li>
                                 <li><a href="team.html">Our Team</a></li>
                             </ul>
@@ -64,6 +87,69 @@
                                             <a class="a2a_button_wechat"></a>
                                             <a class="a2a_button_reddit"></a>
                                             </div>
+<<<<<<< HEAD
+                                            <script async src="https://static.addtoany.com/menu/page.js"></script><br>
+
+								<h3>The failure of "keep the critical vote appeal"</h3>
+								<p>Despite the political storm of disqualifying the Legco by-election candidates in the past few weeks, Hong Kong has just passed one of the most quietest election with low-turnout rate. Candidates of the pan-democratic camp have been using “keep the critical votes” as emergency appeal to call for more voters. Yet, they failed to win all of the four seats back, as polling result suggests that there’s a shrink of its vote share. </p>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div id="pie1" style="width: 60%;height:430px;"></div>
+                                </div>
+                                <script type="text/javascript">
+                                    option = {
+                                        title: {
+                                            text: 'Total number of votes',
+                                            subtext: 'Source : 2018 The Legislative Council Commission',
+                                            x: 'center'
+                                        },
+                                        tooltip: {
+                                            trigger: 'item',
+                                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                        },
+                                        legend: {
+                                            "align": "left",
+                                            "top": "70",
+                                            "left": "80",
+                                            "orient": "vertical",
+                                            data: ['Yes', 'No', 'Abstain', 'Absent', 'Present']
+                                        },
+                                        series: [{
+                                            name: 'Type of Vote',
+                                            type: 'pie',
+                                            radius: '55%',
+                                            center: ['50%', '60%'],
+                                            data: [{
+                                                                                value: 8077,
+                                                name: 'Yes'
+                                            }, {
+                                                value: 9728,
+                                                name: 'No'
+                                            }, {
+                                                value: 993,
+                                                name: 'Abstain'
+                                            }, {
+                                                value: 7545,
+                                                name: 'Absent'
+                                            }, {
+                                                value: 539,
+                                                name: 'Present'
+                                            }],
+                                            itemStyle: {
+                                                emphasis: {
+                                                    shadowBlur: 10,
+                                                    shadowOffsetX: 0,
+                                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                                }
+                                            }
+                                        }]
+                                    };
+
+                                    var myChart1 = echarts.init(document.getElementById('pie1'));
+                                    myChart1.setOption(option);
+                                </script>
+								<hr />
+=======
                                             <script async src="https://static.addtoany.com/menu/page.js"></script>
                                 <br> 
 								<h3>The failure of "keep the critical vote appeal"</h3>
@@ -76,9 +162,55 @@
                                 <p>Apart from the failure of political campaigns and appeal to the local supporters admitted by the candidates, some voters expressed their disappointment towards the past performance of the pan-democratic legislators by “cast the vote in the sea”, which literally means  casting blank vote.</p>
                                     
                                 <p>In three recent by-elections, the blank vote rate reached 3.4 per cent in 2010’s controversial “Five Constituency Referendum”, followed by a significant drop to 0.38 per cent in 2016, and in this year rose up to 0.92 per cent.</p>
+>>>>>>> origin/master
 
-								<h4>Feugiat aliquam</h4>
+								<h4>Blank Votes</h4>
 								<p>Nam sapien ante, varius in pulvinar vitae, rhoncus id massa. Donec varius ex in mauris ornare, eget euismod urna egestas. Etiam lacinia tempor ipsum, sodales porttitor justo. Aliquam dolor quam, semper in tortor eu, volutpat efficitur quam. Fusce nec fermentum nisl. Aenean erat diam, tempus aliquet erat.</p>
+                                <div id="blank"></div>
+                                <script type="text/javascript">
+                                    Highcharts.chart('blank', {
+
+                                        title: {
+                                            text: 'Blank Vote Rate of By-Election, 2010, 2016, 2018'
+                                        },
+                                    
+                                        subtitle: {
+                                            text: 'Source: Electoral Affairs Commission'
+                                        },
+                                    
+                                        yAxis: {
+                                            title: {
+                                                text: 'Rate of blank vote'
+                                            }
+                                        },
+                                        xAxis: {
+                                            categories: ["2010 (5 Constituencies Referendum)", "2016 (Ronny Tong's Resignation)", "2018 (4 Disqualified Seats)"],
+                                        },
+                                        series: [{
+                                            name: 'Rate of Blank Vote %',
+                                            data: [3.405, 0.377, 0.920]
+                                        }],
+
+                                        responsive: {
+                                            rules: [{
+                                                condition: {
+                                                    maxWidth: 500
+                                                },
+                                                chartOptions: {
+                                                    
+                                                    legend: {
+                                                        layout: 'horizontal',
+                                                        align: 'center',
+                                                        verticalAlign: 'bottom'
+                                                    }
+                                                    
+                                                }
+                                            }]
+                                        }
+
+                                    });
+
+                                </script>
 
 								<p>Etiam iaculis nulla ipsum, et pharetra libero rhoncus ut. Phasellus rutrum cursus velit, eget condimentum nunc blandit vel. In at pulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui, at vestibulum sit amet, auctor bibendum neque.</p>
 
@@ -86,6 +218,196 @@
 						</section>
 				</article>
 
+        <!-- Two -->
+                <article id="absentSection">
+                        <section class="wrapper style5">
+                            <div class="inner">
+
+                               <hr>
+                                <h3>High absent rates of the pan-democratic legislators </h3>
+                                <p>The number of absent vote accounts for 28 percent of the overall votes in the current term (2016-20). Accord to the LegCo voting procedure, if the legislator is absent or does not press the “Present Button”, the vote will count as being absent. </p>
+                                <div class="col-lg-12 col-md-12">
+                                    <div id="absentChart" style="height: 1000px;width: 100%"></div>
+                                </div>
+<!--ugly indented big chart-->
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+<script type="text/javascript">
+    var dom = document.getElementById("absentChart");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    app.title = '堆叠条形图';
+
+    option = {
+        title: {
+            text: 'Voting Record of the Legco Members',
+            subtext: 'Source: 2018 Legislative Council Commission',
+            x: 'center'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            "align": "left",
+            "top": "60",
+            "right": "70",
+            "orient": "horizontal",
+            data: ['Absent', 'Yes', 'No', 'Abstain', 'Present']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value'
+        },
+        yAxis: {
+            type: 'category',
+            data: ["Max", "Abraham SHEK", "Dennis KWOK", "Prof Joseph LEE", "Kenneth LEUNG", "HUI Chi-fung", "MA Fung-kwok", "CHUNG Kwok-pan", "IP Kin-yuen", "James TO", "Michael TIEN", "LEUNG Yiu-chung", "WU Chi-wai", "SHIU Ka-chun", "Dr KWOK Ka-ki", "KWONG Chun-yu", "Charles Peter MOK", "Dr Pierre CHAN", "Paul TSE", "Dr Fernando CHEUNG", "CHU Hoi-dick", "Claudia MO", "LAM Cheuk-ting", "Dr Helena WONG", "Mrs Regina IP", "Tanya CHAN", "Andrew WAN", "Tommy CHEUNG", "Alvin YEUNG", "Kenneth LAU", "Jeremy TAM", "Dr CHIANG Lai-wan", "Dr Priscilla LEUNG", "Jeffrey LAM", "CHAN Han-pan", "Dr Junius HO", "Dr CHENG Chung-tai", "Christopher CHEUNG", "Jimmy NG", "LUK Chung-hung", "Martin LIAO", "Steven HO", "YIU Si-wing", "LAU Kwok-fan", "CHAN Chi-chuen", "WONG Kwok-kin", "Frankie YICK", "LEUNG Che-cheung", "Holden CHOW", "Starry LEE", "CHEUNG Kwok-kwan", "CHAN Kin-por", "KWOK Wai-keung", "POON Siu-ping", "CHAN Hak-kan", "YUNG Hoi-yan", "Dr Elizabeth QUAT", "WONG Ting-kwong", "HO Kai-ming", "Wilson OR", "Alice MAK", "SHIU Ka-fai", "CHAN Chun-ying", "Andrew LEUNG", "Ir Dr LO Wai-kwok", "Members Not Affected by DQ", "Dr YIU Chung-yim", "Nathan LAW", "LEUNG Kwok-hung", "Dr LAU Siu-lai", "AU Nok-hin", "Sixtus LEUNG", "YAU Wai-ching", "Gary FAN Kwok-wai", "Vincent CHENG Wing-shun", "Tony TSE Wai-chuen", "Min"
+            ],
+            axisTick: {
+                show:true,
+                alignWithLabel: true,
+                interval:0
+            },
+            axisLabel:{
+                show: true,
+                interval:0,
+                //showMinLabel: true,
+                //showMaxLabel: true,
+                //backgroundColor: 'lightblue'
+            }
+        },
+        series: [{
+            name: 'Absent',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: false,
+                    position: 'insideRight'
+                }
+            },
+            data: [0, 252, 243, 224, 224, 224, 221, 219, 215, 208, 205, 192, 192, 189, 188, 185, 183, 178, 171, 166, 164, 162, 162, 155, 153, 152, 138, 137, 137, 133, 128, 122, 100, 92, 79, 79, 78, 74, 72, 71, 66, 52, 49, 49, 47, 44, 42, 42, 42, 40, 36, 34, 34, 32, 31, 27, 24, 22, 22, 22, 20, 19, 15, 11, 6, 0,189, 107, 77, 62, 9, 1, 1, 0, 0, 0, 0]
+        }, {
+            name: 'Yes',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: false,
+                    position: 'insideRight'
+                }
+            },
+            data: [0, 37, 108, 128, 125, 118, 72, 74, 127, 125, 81, 137, 146, 160, 155, 161, 159, 134, 77, 172, 142, 163, 177, 174, 85, 179, 199, 78, 188, 41, 184, 94, 89, 73, 100, 88, 240, 71, 74, 107, 80, 91, 92, 93, 235, 103, 92, 104, 117, 106, 98, 93, 116, 124, 118, 109, 118, 109, 119, 106, 126, 99, 97, 0, 106, 0,62, 146, 166, 191, 0, 0, 0, 0, 0, 0, 0
+            ]
+        }, {
+            name: 'No',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: false,
+                    position: 'insideRight'
+                }
+            },
+            data: [0, 106, 40, 37, 39, 39, 90, 98, 44, 41, 102, 63, 45, 43, 37, 41, 56, 65, 147, 53, 70, 67, 42, 43, 155, 38, 45, 178, 52, 217, 52, 168, 193, 227, 200, 218, 55, 240, 242, 207, 240, 240, 238, 245, 86, 234, 253, 234, 219, 221, 245, 257, 232, 233, 229, 249, 235, 246, 240, 251, 235, 266, 252, 0, 270, 0, 49, 34, 53, 33, 4, 0, 0, 0, 0, 0, 0
+
+            ]
+        }, {
+            name: 'Abstain',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: false,
+                    position: 'insideRight'
+                }
+            },
+            data: [0, 4, 9, 10, 12, 12, 17, 9, 14, 7, 12, 8, 11, 8, 14, 8, 2, 23, 4, 9, 22, 8, 13, 13, 7, 16, 13, 7, 16, 9, 10, 16, 18, 8, 21, 15, 27, 15, 12, 14, 14, 17, 21, 12, 27, 18, 13, 20, 22, 22, 21, 16, 17, 11, 22, 15, 23, 22, 18, 21, 18, 16, 33, 0, 18, 0, 7, 20, 11, 19, 0, 0, 0, 0, 0, 0, 0]
+        }, {
+            name: 'Present',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: false,
+                    position: 'insideRight'
+                }
+            },
+            data: [0, 1, 0, 1, 0, 7, 0, 0, 0, 19, 0, 0, 6, 0, 6, 5, 0, 0, 1, 0, 2, 0, 6, 15, 0, 15, 5, 0, 7, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 0, 0, 0, 11, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 3, 389, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0]
+        }]
+    };;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+<!--ugly indented big chart-->
+
+                                <h4>Feugiat aliquam</h4>
+                                <p>Nam sapien ante, varius in pulvinar vitae, rhoncus id massa. Donec varius ex in mauris ornare, eget euismod urna egestas. Etiam lacinia tempor ipsum, sodales porttitor justo. Aliquam dolor quam, semper in tortor eu, volutpat efficitur quam. Fusce nec fermentum nisl. Aenean erat diam, tempus aliquet erat.</p>
+
+                                <p>Etiam iaculis nulla ipsum, et pharetra libero rhoncus ut. Phasellus rutrum cursus velit, eget condimentum nunc blandit vel. In at pulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui, at vestibulum sit amet, auctor bibendum neque.</p>
+
+                            </div>
+                        </section>
+                </article>
+
+        <!-- Three -->
+                <article id="infographic">
+                        <section class="wrapper style5">
+                            <div class="inner">
+
+                                <hr />
+                                <h3>Infographic of the voting procedure</h3>
+                                <p>The attendance of the Pan-democratic camps is vital in keeping the critical vote. As a simple majority vote is needed in order to pass or object the bill, motions or amendments proposed by the government and individual legislators. </p>
+                                <!--infographic-->
+                                <div class="row">
+                                    <div class="col-xs-2"></div>
+                                        <div class="col-xs-8">
+                                            <img src="infographics/1.png" style='width:100%;' border="0" alt="infographic1">
+                                            <img src="infographics/2.png" style='width:100%;' border="0" alt="infographic2">
+                                        </div>
+                                    <div class="col-xs-2"></div>
+                                </div>
+                                <!--infographic-->
+                            </div>
+                        </section>
+                </article>
+
+       <!-- FOUR -->
+                <article id="main">
+                        <section class="wrapper style5">
+                            <div class="inner">
+
+                                <hr />
+                                <h3>Failure to safeguard the critical vote in controversial issues</h3>
+                                <p>In the past, there are numerous controversial motions, bills or amendments being passed or negatived as a result of the not-show-up by the Pan-democratic camp. </p>
+                                <!--html table-->
+
+                                <!--html table-->
+                                <h4>Blank Votes</h4>
+                                <p>Nam sapien ante, varius in pulvinar vitae, rhoncus id massa. Donec varius ex in mauris ornare, eget euismod urna egestas. Etiam lacinia tempor ipsum, sodales porttitor justo. Aliquam dolor quam, semper in tortor eu, volutpat efficitur quam. Fusce nec fermentum nisl. Aenean erat diam, tempus aliquet erat.</p>
+
+
+                                <p>Etiam iaculis nulla ipsum, et pharetra libero rhoncus ut. Phasellus rutrum cursus velit, eget condimentum nunc blandit vel. In at pulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui, at vestibulum sit amet, auctor bibendum neque.</p>
+
+                            </div>
+                        </section>
+                </article>
         <!-- CTA -->
         <section id="cta" class="wrapper style4">
             <div class="inner">
