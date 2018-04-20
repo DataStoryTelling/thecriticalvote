@@ -39,6 +39,11 @@
             height: 400px;
             margin: 0 auto
         }
+
+        table {
+                width:100%;
+                overflow:scroll;
+        }
     </style>
 </head>
 
@@ -103,14 +108,16 @@
                                 <p>The recent Legco by-election polling data suggested that “keep the critical votes” no longer appeal to the voters. But why? How important are the pan-democratic camp votes in the Legco? Did the pan-democratic legislators treasure their votes in past? </p>
 								<p>Despite the political storm of disqualifying the Legco by-election candidates in the past few weeks, Hong Kong has just passed one of the quietest election with a low-turnout rate. Candidates of the Pan-democracy camp have been using “keep the critical votes” as an emergency appeal to call for more voters. Yet, they failed to win all of the four seats back, as polling result suggests that there’s a shrink of its vote share. </p>
                                 <p>The total turnout rate of the by-election dropped by more than 4 percent against the 2016 by-election and 18.2 percent against the general election. </p>
+                                <div class="row">
                                 <div class="col-xs-12 col-md-6">
                                     <br>
                                     <p>Apart from the failure of political campaigns and appeal to the local supporters admitted by the candidates, some voters expressed their disappointment towards the past performance of the pan-democratic legislators by “cast the vote in the sea”, which literally means casting a blank vote.</p>
                                     <p>In three recent by-elections, the blank vote rate reached 3.4 percent in 2010’s controversial “Five Constituency Referendum”, followed by a significant drop to 0.38 percent in 2016, and in this year rose up to 0.92 percent.</p>
                                     <br>
                                 </div>
-                                <div class="col-md-6 col-xs-12">
-                                    <div id="blank"></div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div id="blank" width="100%" height="400" frameborder="0"></div>
+                                </div>
                                 </div>
                                 <script type="text/javascript">
                                     Highcharts.chart('blank', {
@@ -397,7 +404,8 @@
                                 <p style="color:blue"><a href="https://datastorytelling.github.io/thecriticalvote/voterecord.html" target="_blank">(CLICK to open out VOTE RECORD EXPLORER</a> to check full details)</p>
                                 <!--html table-->
                                 <ul><li>Summon SJ to to testify on matters related to the persistent withholding of public information by government departments at present. Motion was negatived in Geographical Constituency with 7 YES - 11 NO while 12 pan-democratic member were absent. (01-02-2018 Mover: Chu Hoi-Dick)(table)</li></ul>
-                                <table class="details chu-hoi-dick" style="width:100%;height:auto;">
+                                <div class="tableContainer">
+                                <table class="details chu-hoi-dick">
                                         <tbody><tr>
                                             <td>Constituency:</td>
                                             <th colspan="5">Geographical Constituency</th>
@@ -450,8 +458,9 @@
                                             
                                         </tr>
                                     </tbody></table>
-
+                                </div>
                                 <ul><li>Summon Commissioner of Police to testify matters regarding the purchased water cannons.  Motion was negatived in Geographical Constituency with 9 YES - 12 NO while 5 pan-democratic member were absent. (18-01-2018 Mover: Kenneth Leung)(table)</li></ul>
+                                <div class="tableContainer">
                                 <table class="details leung-kenneth">
                                         <tbody><tr>
                                             <td>Constituency:</td>
@@ -505,10 +514,11 @@
                                             
                                         </tr>
                                     </tbody></table>
+                                </div>
                                 <ul><li>Regarding the amendment on Public Health (Animals and Birds) (Animal Traders) Regulation, aiming at controlling illegal pets trading, Jeremy Tam and Claudia Mo proposed to delay the enactment date for the public’s better knowledgement of the new regulation. Motion failed in both constituencies, 3 were absent. (18-01-2017 Mover: Jeremy Tam & Claudia MO)</li><br>
                                 <li>HUI Chi-fung proposed 12 amendment advice to support middle class in terms of housing, education, labour right. (02-03-2017 Mover: HUI Chi-fung)(table)</li>
                                 </ul>
-
+                                <div class="tableContainer">
                                 <table class="details Hui-chi-fung">
                                         <tbody><tr>
                                             <td>Constituency:</td>
@@ -562,8 +572,9 @@
                                             
                                         </tr>
                                     </tbody></table>
-
+                                </div>
                                 <ul><li>Kwok Ka-ki proposed amendments to urge review on Hong Kong capability to serving more shopping trips, and the review of investment into the Disneyland. He also suggested to develop diversified tourism. (22-03-2017 Mover: Kwok Ka-ki)(table)</li></ul>
+                                <div class="tableContainer">
                                 <table class="details Kwok-ka-ki">
                                         <tbody><tr>
                                             <td>Constituency:</td>
@@ -617,9 +628,11 @@
                                             
                                         </tr>
                                     </tbody></table>
+                                </div>
                                 <br>
                                 <p>Motions introduced and passed by Pro-establishment camp due to absent of the Pan-democratic Members and as a result led to the failure of using veto power in the Geographical Constituency direct election.</p>
                                 <ul><li>Cheung Kwok-kwan proposed an amendment to delete the criticisms on the poor performances and frequent oversea official visits against former Secretary for Education Eddie Ng Hak-kim. Passed 14-8 in Geographical Constituency with 9 absent from the Pan-democratic camp. (15-12-2016 Mover: Cheung Kwok-kwan) (table)</li></ul>
+                                <div class="tableContainer">
                                 <table>
                                         <tbody><tr>
                                             <td>Constituency:</td>
@@ -671,9 +684,11 @@
                                             
                                         </tr>
                                     </tbody></table>
+                                </div>
                                 <br>
                                 <p>Voting against camp fellow:</p>
                                 <ul><li>IP Kin-yuen proposed a motion to criticise the unsatisfactory performance of former Secretary for Education, Eddie Ng Hak-kim and listed out the prerequisites for selecting the next Secretary. The motion was passed by the votes from Pro-establishment camp while Pan-democratic members voted contrastly and 8 of them were absent. (15-12-2016 Mover:IP Kin-yuen) (table)</li></ul>
+                                <div class="tableContainer">
                                 <table class="details Yip-kin-yuen">
                                         <tbody><tr>
                                             <td>Constituency:</td>
@@ -727,6 +742,7 @@
                                             
                                         </tr>
                                     </tbody></table>
+                                </div>
                                 <!--html table-->
                                 <div id="response"></div>
                                 <br>
@@ -749,7 +765,7 @@
                                         <p>Leung Kai-Cheong said he was the convener of the "300 plus" consortium of the democratic election committee and was required to accompany the candidates to sign up on that day. He said that he could not reschedule with others as it was their common strategy to register on the first day.</p>
                                     </div>
                                     <div class="col-xs-12 col-md-6">
-                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fchuhoidick%2Fposts%2F1166601390072450%3A0&width=500" width="500" height="678" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fchuhoidick%2Fposts%2F1166601390072450%3A0&width=500" width="100%" height="678" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                                     </div>
                                 </div>
                                 
