@@ -72,10 +72,10 @@ function processFilterData(data, memberData){
 			var temp1 = choiceOfMotion["vote-summary"]["geographical-constituency"];
 			var temp2 = choiceOfMotion["vote-summary"]["functional-constituency"];
 			if (sepFlag === "Yes"){
-				d3.select(".motionInfo").select(".geo-con").html("Geographical Constituency Vote: " + "Obstain: "+ temp1["abstain-count"] + " | Vote Count: " + temp1["vote-count"] + 
+				d3.select(".motionInfo").select(".geo-con").html("Geographical Constituency Vote: " + "Abstain: "+ temp1["abstain-count"] + " | Vote Count: " + temp1["vote-count"] + 
 															" | Yes: " + temp1["yes-count"] + " | No: " + temp1["no-count"] + " | Vote Count: " +temp1["vote-count"]+ " | Present Count: " + temp1["present-count"])
 															.style("visibility", "visible");
-				d3.select(".motionInfo").select(".func-con").html("Functional Constituency Vote: " + "Obstain: "+ temp2["abstain-count"] + " | Vote Count: " + temp2["vote-count"] + 
+				d3.select(".motionInfo").select(".func-con").html("Functional Constituency Vote: " + "Abstain: "+ temp2["abstain-count"] + " | Vote Count: " + temp2["vote-count"] + 
 															" | Yes: " + temp2["yes-count"] + " | No: " + temp2["no-count"] + " | Vote Count: " +temp2["vote-count"]+ " | Present Count: " + temp2["present-count"])
 															.style("visibility", "visible");
 				d3.select(".motionInfo").select(".all-con").html("");
@@ -83,7 +83,7 @@ function processFilterData(data, memberData){
 				d3.select(".detail").style("visibility", "visible");
 			} else{
 				var temp = choiceOfMotion["vote-summary"]["overall"];
-				d3.select(".motionInfo").select(".all-con").html("Vote: " + "Obstain: "+ temp["abstain-count"] + " | Vote Count: " + temp["vote-count"] + 
+				d3.select(".motionInfo").select(".all-con").html("Vote: " + "Abstain: "+ temp["abstain-count"] + " | Vote Count: " + temp["vote-count"] + 
 															" | Yes: " + temp["yes-count"] + " | No: " + temp["no-count"] + " | Vote Count: " +temp["vote-count"]+ " | Present Count: " + temp["present-count"])
 															.style("visibility", "visible");
 				d3.select(".motionInfo").select(".geo-con").html("");
